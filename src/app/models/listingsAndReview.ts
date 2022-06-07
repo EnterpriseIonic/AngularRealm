@@ -1,0 +1,93 @@
+import Realm from "realm";
+
+export type listingsAndReview = {
+  _id?: string;
+  access?: string;
+  accommodates?: number;
+  address?: listingsAndReview_address;
+  amenities: Realm.List<string>;
+  availability?: listingsAndReview_availability;
+  bathrooms?: Realm.BSON.Decimal128;
+  bed_type?: string;
+  bedrooms?: number;
+  beds?: number;
+  calendar_last_scraped?: Date;
+  cancellation_policy?: string;
+  cleaning_fee?: Realm.BSON.Decimal128;
+  description?: string;
+  extra_people?: Realm.BSON.Decimal128;
+  first_review?: Date;
+  guests_included?: Realm.BSON.Decimal128;
+  host?: listingsAndReview_host;
+  house_rules?: string;
+  images?: listingsAndReview_images;
+  interaction?: string;
+  last_review?: Date;
+  last_scraped?: Date;
+  listing_url?: string;
+  maximum_nights?: string;
+  minimum_nights?: string;
+  monthly_price?: Realm.BSON.Decimal128;
+  name?: string;
+  neighborhood_overview?: string;
+  notes?: string;
+  number_of_reviews?: number;
+  price?: Realm.BSON.Decimal128;
+  property_type?: string;
+  review_scores?: listingsAndReview_review_scores;
+  reviews: Realm.List<listingsAndReview_reviews>;
+  room_type?: string;
+  security_deposit?: Realm.BSON.Decimal128;
+  space?: string;
+  summary?: string;
+  transit?: string;
+  weekly_price?: Realm.BSON.Decimal128;
+};
+
+export const listingsAndReviewSchema = {
+  name: 'listingsAndReview',
+  properties: {
+    _id: 'string?',
+    access: 'string?',
+    accommodates: 'int?',
+    address: 'listingsAndReview_address',
+    amenities: 'string[]',
+    availability: 'listingsAndReview_availability',
+    bathrooms: 'decimal128?',
+    bed_type: 'string?',
+    bedrooms: 'int?',
+    beds: 'int?',
+    calendar_last_scraped: 'date?',
+    cancellation_policy: 'string?',
+    cleaning_fee: 'decimal128?',
+    description: 'string?',
+    extra_people: 'decimal128?',
+    first_review: 'date?',
+    guests_included: 'decimal128?',
+    host: 'listingsAndReview_host',
+    house_rules: 'string?',
+    images: 'listingsAndReview_images',
+    interaction: 'string?',
+    last_review: 'date?',
+    last_scraped: 'date?',
+    listing_url: 'string?',
+    maximum_nights: 'string?',
+    minimum_nights: 'string?',
+    monthly_price: 'decimal128?',
+    name: 'string?',
+    neighborhood_overview: 'string?',
+    notes: 'string?',
+    number_of_reviews: 'int?',
+    price: 'decimal128?',
+    property_type: 'string?',
+    review_scores: 'listingsAndReview_review_scores',
+    reviews: 'listingsAndReview_reviews[]',
+    room_type: 'string?',
+    security_deposit: 'decimal128?',
+    space: 'string?',
+    summary: 'string?',
+    transit: 'string?',
+    weekly_price: 'decimal128?',
+  },
+  primaryKey: '_id',
+};
